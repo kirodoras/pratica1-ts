@@ -1,6 +1,6 @@
 import { connection } from "../database.js";
 
 export async function select(){
-    const result = await connection.query(`SELECT * FROM fighters`);
+    const result = await connection.query(`SELECT username, wins, losses, draws FROM fighters`);
     return result.rows;
 }
